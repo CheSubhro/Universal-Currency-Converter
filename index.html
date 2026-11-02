@@ -25,191 +25,113 @@
     <!-- Main Wrapper -->
     <main class="app-container">
 
+        
         <!-- Header -->
         <header class="header">
 
-            <div class="logo">
-                <span class="logo-icon">◈</span>
-                <span class="logo-text">Currency<span>Flow</span></span>
-            </div>
+            <a href="#" class="logo">
+                CurrencyFlow
+            </a>
 
             <div class="header-info">
-                <span class="status-dot"></span>
-                <span>Currency Converter</span>
+                <span>Exchange rates</span>
             </div>
 
         </header>
 
-
         <!-- Hero Section -->
         <section class="hero-section">
 
-            <span class="hero-label">SMART CURRENCY CONVERTER</span>
-
             <h1>
-                Convert Currency.<br>
-                <span>Travel Without Limits.</span>
+                Currency conversion,<br>
+                <span>made simple.</span>
             </h1>
 
             <p>
-                Convert currencies quickly and easily with
-                the latest available exchange rates.
+                Convert between currencies with the latest
+                available exchange rates.
             </p>
 
         </section>
 
-
         <!-- Converter Section -->
-        <section class="converter-section">
+        
+        <section class="converter-card">
+            <div class="card-heading">
+                <h2>Currency converter</h2>
+                <p>Enter an amount and select the currencies.</p>
+            </div>
 
-            <div class="converter-card">
+            <div class="amount-section">
+                <label for="amount">Amount</label>
+                <input
+                    type="number"
+                    id="amount"
+                    value="1"
+                    min="0.01"
+                    step="any"
+                    placeholder="Enter amount"
+                >
+            </div>
 
-                <!-- Card Header -->
-                <div class="card-header">
-
-                    <div>
-                        <h2>Currency Converter</h2>
-                        <p>Choose currencies and enter an amount.</p>
+            <div class="currency-section">
+                <div class="currency-field">
+                    <label for="from-currency">From</label>
+                    <div class="currency-select">
+                        <span id="from-flag">🇺🇸</span>
+                        <select id="from-currency"></select>
                     </div>
-
-                    <div class="card-icon">⇄</div>
-
                 </div>
 
-
-                <!-- Amount Input -->
-                <div class="amount-section">
-
-                    <label for="amount">Amount</label>
-
-                    <input
-                        type="number"
-                        id="amount"
-                        placeholder="Enter amount"
-                        value="1"
-                        min="0"
-                    >
-
-                </div>
-
-
-                <!-- Currency Selection -->
-                <div class="currency-section">
-
-                    <!-- From Currency -->
-                    <div class="currency-box">
-
-                        <label for="from-currency">From</label>
-
-                        <div class="currency-select">
-
-                            <span class="currency-flag" id="from-flag">🇺🇸</span>
-
-                            <select id="from-currency">
-                                <option value="USD" selected>USD - US Dollar</option>
-                            </select>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Swap Button -->
-                    <button
-                        type="button"
-                        class="swap-button"
-                        id="swap-button"
-                        aria-label="Swap currencies"
-                    >
-                        ⇄
-                    </button>
-
-
-                    <!-- To Currency -->
-                    <div class="currency-box">
-
-                        <label for="to-currency">To</label>
-
-                        <div class="currency-select">
-
-                            <span class="currency-flag" id="to-flag">🇮🇳</span>
-
-                            <select id="to-currency">
-                                <option value="INR" selected>INR - Indian Rupee</option>
-                            </select>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Convert Button -->
                 <button
                     type="button"
-                    class="convert-button"
-                    id="convert-button"
+                    class="swap-button"
+                    id="swap-button"
+                    aria-label="Swap currencies"
                 >
-                    Convert Currency
-                    <span>→</span>
+                    ⇄
                 </button>
 
-
-                <!-- Result Section -->
-                <div class="result-section" id="result-section">
-
-                    <p class="result-label">CONVERTED AMOUNT</p>
-
-                    <h2 id="converted-amount">--</h2>
-
-                    <p id="exchange-rate">
-                        Exchange rate will appear here.
-                    </p>
-
+                <div class="currency-field">
+                    <label for="to-currency">To</label>
+                    <div class="currency-select">
+                        <span id="to-flag">🇮🇳</span>
+                        <select id="to-currency"></select>
+                    </div>
                 </div>
-
-
-                <!-- Exchange Rate Information -->
-                <div class="rate-info">
-
-                    <span class="rate-indicator"></span>
-
-                    <p id="rate-update">
-                        Exchange rate information will appear here.
-                    </p>
-
-                </div>
-
             </div>
 
-        </section>
+            <button type="button" class="convert-button" id="convert-button">
+                Convert Currency <span>→</span>
+            </button>
 
+            <div class="result-section" id="result-section">
+                <p class="result-label">Converted amount</p>
+                <h2 id="converted-amount">--</h2>
+                <p id="exchange-rate">Exchange rate will appear here.</p>
+                <p id="rate-update">Rates are updated daily.</p>
+            </div>
+        </section>
 
         <!-- Features Section -->
+        
         <section class="features-section">
-
             <div class="feature-card">
-                <span>⚡</span>
-                <h3>Fast Conversion</h3>
-                <p>Convert currencies in seconds.</p>
+                <h3>Simple conversion</h3>
+                <p>Convert currencies with a straightforward interface.</p>
             </div>
 
             <div class="feature-card">
-                <span>🌍</span>
-                <h3>Multiple Currencies</h3>
-                <p>Choose from supported currencies.</p>
+                <h3>Multiple currencies</h3>
+                <p>Choose from a wide range of supported currencies.</p>
             </div>
 
             <div class="feature-card">
-                <span>📊</span>
-                <h3>Latest Rates</h3>
-                <p>Access updated exchange rates.</p>
+                <h3>Daily exchange rates</h3>
+                <p>View the latest available reference exchange rates.</p>
             </div>
-
         </section>
-
-
+        
         <!-- Footer -->
         <footer class="footer">
 
